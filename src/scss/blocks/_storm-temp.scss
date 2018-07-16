@@ -1,0 +1,110 @@
+.storm-temp{
+
+  &__content{
+    width: 1200px;
+    margin: 10px auto;
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+  }
+
+  &__title{
+    color: #db302c;
+    font-family: "Eurostile LT Std - Demi", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+
+    &--sm{
+      font-size: 30px;
+      text-align: initial;
+    }
+  }
+
+  &__list{
+    color: #000000;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+
+  & p{
+    color: #000000;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+
+  &__text{
+    color: #000000;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+
+  & .searchform{
+
+    & div{
+      text-align: center;
+
+      & label{
+        color: #000000;
+        font-family: "Eurostile LT Std - Demi", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        
+        @media (max-width: 640px) {
+          font-size: 24px;
+        }
+
+        @media (max-width: 490px) {
+          display: none;
+        }
+      }
+
+      & #s{
+        width: 241px;
+        height: 54px;
+        background-color: #ffffff;
+        border: 1px solid #b7b7b7;
+        padding: 0 0 0 18px;
+        font-family: Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+
+        @media (max-width: 640px) {
+          width: 150px;
+          height: 40px;
+        }
+      }
+
+      & #searchsubmit{
+        width: 137px;
+        height: 54px;
+        background-color: #db302c;
+        color: #ffffff;
+        font-family: Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        margin-left: 10px;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+
+        @media (max-width: 640px) {
+          width: 110px;
+          height: 42px;
+        }
+
+        @media (max-width: 490px) {
+          width: 100px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
