@@ -1,0 +1,249 @@
+.header{
+  &__panel{
+
+    &--top{
+      background-color: $color-black;
+      height: $h-top-panel-height;
+
+      @media (max-width: 800px) {
+        height: 100%;
+      }
+    }
+
+    &--bottom{
+      background-color: $color-black60;
+      height: $h-bot-panel-height;
+
+      @media (max-width: 800px) {
+        height: 100px;
+      }
+    }
+
+    &__content{
+      width: $content-width;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 1280px) {
+        width: 90%;
+      }
+
+      @media (max-width: 800px) {
+        align-items: flex-start;
+      }
+
+      @media (max-width: 560px) {
+        width: 98%;
+      }
+    }
+  }
+
+  &__custom-element{
+
+    @media (max-width: 800px) {
+      margin: 8px 0;
+    }
+
+    &__link{
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    &__text{
+      color: $color-gold;
+      font-family: Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+
+      @media (max-width: 560px) {
+        font-size: 12px;
+      }
+    }
+    &__img{
+      padding-left: $h-cust-el-img-p-l;
+
+      @media (max-width: 560px) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__menu{
+
+    &__burger_1{
+      display: none;
+      text-align: right;
+      font-family: Helvetica, sans-serif;
+      font-weight: 700;
+      color: $color-white;
+      width: 74px;
+      cursor: pointer;
+      margin: 8px 0 8px auto;
+
+      @media (max-width: 800px) {
+        display: block;
+      }
+    }
+
+    &__burger_2{
+      display: none;
+      text-align: right;
+      font-family: Helvetica, sans-serif;
+      font-weight: 700;
+      color: $color-white;
+      width: 74px;
+      cursor: pointer;
+      margin: 8px 0 8px auto;
+
+      @media (max-width: 800px) {
+        display: block;
+      }
+    }
+
+    &--main{
+      width: 368px;
+      font-size: 14px;
+
+      @media (max-width: 800px) {
+        width: auto;
+      }
+    }
+
+    &--secondary{
+      width: 906px;
+      font-size: 16px;
+
+      @media (max-width: 1280px) {
+        width: 70%;
+        font-size: 14px;
+      }
+
+      @media (max-width: 800px) {
+        width: auto;
+      }
+    }
+
+    &__item-list{
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+
+      &--main{
+        @media (max-width: 800px) {
+          margin: 6px 38px 6px 0;
+          text-align: right;
+          display: none;
+        }
+
+        &.active{
+          display: block;
+        }
+      }
+
+      &--secondary{
+        @media (max-width: 800px) {
+          display: none;
+          margin: 0;
+          text-align: center;
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: 5px;
+        }
+
+        &.active{
+          display: block;
+        }
+      }
+    }
+
+    &__item{
+      font-family: Helvetica, sans-serif;
+      font-weight: 700;
+      display: inline-block;
+      position: relative;
+      color: $color-white;
+
+      @media (max-width: 1024px) {
+        padding-left: 8px;
+      }
+
+      @media (max-width: 800px) {
+        margin: 4px 0;
+        display: block;
+      }
+
+      &.active{
+        color: #db302c;
+      }
+
+      &:hover{
+        color: #db302c;
+      }
+
+      &--sub{
+        &:hover{
+
+          & .sub-menu{
+            display: block;
+          }
+        }
+      }
+    }
+
+    & a{
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__logo{
+    margin: 2px 0;
+  }
+
+  &__bg-img{
+    background-image: url("../img/main-bg-img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: $h-bg-img-height;
+
+    @media (max-width: 1024px) {
+      height: 414px;
+    }
+
+    @media (max-width: 800px) {
+      height: 236px;
+    }
+
+    @media (max-width: 560px) {
+      height: 214px;
+    }
+  }
+}
+
+.sub-menu{
+  width: 160px;
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  border: none;
+  background: #ffffff;
+  left: -80px;
+  bottom: -36px;
+  z-index: 1;
+
+  & li{
+    padding: 10px;
+    color: $color-black;
+
+    &:hover{
+      color: #db302c;
+    }
+
+    &.active{
+      color: #db302c;
+    }
+  }
+}
