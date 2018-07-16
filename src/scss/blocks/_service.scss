@@ -1,0 +1,77 @@
+.service{
+
+  &__content{
+    width: $content-width;
+    margin: 27px auto 20px;
+    display: flex;
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  &__info{
+    padding-left: 21px;
+  }
+
+  &__title{
+    color: #db302c;
+    font-family: "Eurostile LT Std - Demi", sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    margin: 0;
+
+    @media (max-width: 800px) {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+
+  & p{
+    color: $color-black;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 11px 0 24px;
+  }
+
+  &::after{
+    content: "";
+    display: block;
+    width: $content-width;
+    margin: 0 auto;
+    height: 1px;
+    background-color: #d4d4d4;
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+  }
+
+  &__image{
+    max-width: 535px;
+    height: auto;
+
+    @media (max-width: 1024px) {
+      max-width: 400px;
+      width: 400px;
+    }
+
+    @media (max-width: 800px) {
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    &__wrapper{
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+    }
+  }
+}
