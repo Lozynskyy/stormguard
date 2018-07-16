@@ -1,0 +1,125 @@
+.services{
+
+  &__content{
+    width: $content-width;
+    margin: 0 auto;
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+
+    &::after{
+      content: "";
+      display: block;
+      width: $content-width;
+      height: 1px;
+      background-color: #d4d4d4;
+
+      @media (max-width: 1280px) {
+        width: 100%;
+      }
+    }
+
+
+  }
+
+  &__title{
+    color: #db302c;
+    font-family: "Eurostile LT Std - Demi", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin: 46px 0 5px 0;
+  }
+
+  &__description{
+    color: #000000;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    width: 440px;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (max-width: 560px) {
+      display: none;
+    }
+  }
+
+  &__table{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+
+    @media (max-width: 1280px) {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__item{
+
+    width: 384px;
+    padding: 13px 8px;
+
+    @media (max-width: 1024px) {
+      width: 344px;
+    }
+
+    &__icon{
+
+      &__circle{
+        width: 87px;
+        height: 87px;
+        background-color: #db302c;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+
+      }
+    }
+
+    &__title{
+      color: #000000;
+      font-family: "Eurostile LT Std - Demi", sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center;
+      margin: 8px 0;
+    }
+
+    &__description{
+      color: #000000;
+      font-family: Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23px;
+      text-align: center;
+      margin: 12px 0;
+
+      @media (max-width: 560px) {
+        display: none;
+      }
+    }
+
+    &__link{
+      text-decoration: none;
+      color: inherit;
+
+      &:hover{
+        color: #db302c;
+      }
+
+      &--image{
+        width: 87px;
+        height: 87px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+    }
+  }
+}
