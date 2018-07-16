@@ -1,0 +1,123 @@
+.blog{
+
+  &__content{
+    width: $content-width;
+    margin: 0 auto;
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+  }
+
+  &__title{
+    color: #db302c;
+    font-family: "Eurostile LT Std - Demi", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin: 30px 0 20px 0;
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &__item{
+    border: 1px solid #e1e1e1;
+    position: relative;
+    display: flex;
+    margin: 10px 0;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
+
+    &__image{
+      width: 384px;
+
+      @media (max-width: 800px) {
+        width: 254px;
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+
+      &__wrapper{
+
+        @media (max-width: 600px) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__date{
+      width: 61px;
+      height: 61px;
+      background-color: $color-gold;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &__month{
+        color: #000000;
+        font-family: "Eurostile LT Std", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 10px 14px 0;
+        display: block;
+      }
+
+      &__day{
+        color: #000000;
+        font-family: "Eurostile LT Std - Demi", sans-serif;
+        font-size: 28px;
+        font-weight: 400;
+        padding: 0 12px;
+        display: block;
+      }
+    }
+
+    &__info{
+      height: 300px;
+    }
+
+    &__title{
+      color: #000000;
+      font-family: "Eurostile LT Std - Demi", sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      margin: 12px 13px 4px;
+    }
+
+    &__short{
+      color: #000000;
+      font-family: Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 0 15px 20px;
+      margin: 0;
+    }
+
+    &__link{
+      color: #db302c;
+      text-decoration: none;
+      border-bottom: 1px solid;
+    }
+
+    &__author{
+      color: #000000;
+      font-family: Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 14px 16px;
+      display: block;
+    }
+  }
+}
