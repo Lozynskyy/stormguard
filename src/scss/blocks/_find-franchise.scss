@@ -1,0 +1,99 @@
+.find-franchise{
+  height: $ff-height;
+  background-color: $color-gold;
+  display: flex;
+  align-items: center;
+
+  &__content{
+    width: 1114px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+
+    @media (max-width: 800px) {
+      width: 96%;
+    }
+
+    @media (max-width: 560px) {
+      flex-direction: column;
+    }
+
+
+    &__item{
+      display: flex;
+      align-items: center;
+
+      &--right{
+        @media (max-width: 1280px) {
+          width: 48%;
+        }
+
+        @media (max-width: 560px) {
+          width: auto;
+        }
+      }
+
+      &--left{
+        @media (max-width: 560px) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &__text{
+    padding-left: 23px;
+
+    @media (max-width: 800px) {
+      padding-left: 10px;
+    }
+
+    &__top{
+      color: $color-black;
+      font-family: "Eurostile LT Std - Demi", sans-serif;
+      font-size: 38px;
+      font-weight: 400;
+      margin: 0;
+
+      @media (max-width: 1280px) {
+        font-size: 36px;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 32px;
+      }
+
+      @media (max-width: 800px) {
+        font-size: 28px;
+      }
+
+      @media (max-width: 560px) {
+        font-size: 18px;
+      }
+    }
+
+    &__bot{
+      color: $color-black;
+      font-family: Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+
+      @media (max-width: 1024px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 800px) {
+        font-size: 12px;
+      }
+
+      @media (max-width: 560px) {
+        display: none;
+      }
+    }
+  }
+}

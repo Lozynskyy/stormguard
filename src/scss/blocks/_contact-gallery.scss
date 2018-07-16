@@ -1,0 +1,144 @@
+.contact-gallery{
+  background-color: #db302c;
+  min-height: 454px;
+
+  &__content{
+    width: $content-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title{
+    color: #ffffff;
+    font-family: "Eurostile LT Std - Demi", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin: 42px 0 22px;
+
+    @media (max-width: 800px) {
+      text-align: center;
+    }
+  }
+
+  &__description{
+    color: #ffffff;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 25px 0;
+
+    @media (max-width: 560px) {
+      display: none;
+    }
+
+    &__link{
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid;
+    }
+  }
+
+  &__contact{
+    width: 588px;
+
+    @media (max-width: 1280px) {
+      margin-right: 10px;
+      width: 50%;
+    }
+
+    @media (max-width: 800px) {
+      width: 100%;
+      margin: 0;
+    }
+
+    &--short{
+      width: 540px;
+      position: relative;
+
+      @media (max-width: 1280px) {
+        right: 0;
+        padding-right: 20px;
+        width: 50%;
+      }
+
+      @media (max-width: 800px) {
+        width: 100%;
+        padding: 0;
+      }
+
+      &::after{
+        content: "";
+        display: block;
+        height: 394px;
+        width: 1px;
+        background-color: #e6534f;
+        position: absolute;
+        top: 30px;
+        right: -40px;
+
+        @media (max-width: 1280px) {
+          right: 0;
+        }
+
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__gallery{
+    width: 576px;
+
+    @media (max-width: 1280px) {
+      margin-left: 10px;
+      width: 50%;
+    }
+
+    @media (max-width: 800px) {
+      width: 100%;
+      margin: 0;
+    }
+
+    &__body{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &__item{
+      display: block;
+      margin-bottom: 20px;
+      border: 1px solid $color-white;
+      max-width: 130px;
+
+      @media (max-width: 1280px) {
+        margin-right: 10px;
+      }
+
+      @media (max-width: 1024px) {
+        max-width: 162px;
+      }
+
+      @media (max-width: 860px) {
+        max-width: 148px;
+      }
+
+      @media (max-width: 560px) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+

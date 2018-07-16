@@ -1,0 +1,21 @@
+.clients-comments{
+  background-color: #f7f8f8;
+
+  &__content{
+    width: $content-width;
+    margin: 0 auto;
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+  }
+
+  &__title{
+    color: #db302c;
+    font-family: "Eurostile LT Std - Demi", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    padding: 56px 0 2px;
+  }
+}
