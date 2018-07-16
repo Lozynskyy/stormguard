@@ -1,0 +1,81 @@
+.page{
+
+  &__content{
+    width: $content-width;
+    margin: 27px auto 50px;
+    min-height: 331px;
+    display: block;
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &::after{
+    content: "";
+    display: block;
+    width: $content-width;
+    margin: 0 auto;
+    height: 1px;
+    background-color: #d4d4d4;
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+  }
+
+  &__info{
+
+  }
+
+  &__title{
+    color: #db302c;
+    font-family: "Eurostile LT Std - Demi", sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    margin: 0;
+
+    @media (max-width: 800px) {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+
+  & p{
+    color: $color-black;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 11px 0 24px;
+  }
+
+  &__image{
+    max-width: 530px;
+    float: left;
+    margin-right: 24px;
+
+    @media (max-width: 1024px) {
+      width: 400px;
+    }
+
+    @media (max-width: 800px) {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    &__wrapper{
+
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+    }
+  }
+}
