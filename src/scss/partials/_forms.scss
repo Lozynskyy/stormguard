@@ -1,0 +1,212 @@
+.ff-input{
+  width: 241px;
+  height: 54px;
+  background-color: $color-white;
+  border: 1px solid #b7b7b7;
+  padding: 0 0 0 18px;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 30px;
+
+  &::placeholder{
+    color: #bababa;
+  }
+
+  @media (max-width: 800px) {
+    width: 150px;
+    height: 36px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 560px) {
+    margin-left: 0;
+  }
+}
+
+.cg-form{
+
+  &__input{
+    width: 272px;
+    height: 37px;
+    background-color: #ffffff;
+    font-family: "Helvetica", sans-serif;
+    font-style: oblique;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color-black;
+    border: none;
+    padding-left: 10px;
+
+    &::placeholder{
+      color: #ababab;
+    }
+
+    @media (max-width: 1280px) {
+      width: 96%;
+      padding-left: 4%;
+    }
+
+    &-group{
+      display: flex;
+      justify-content: space-between;
+      margin: 22px 0;
+    }
+
+    &__wrapper{
+      width: 48%;
+    }
+  }
+
+  &__select{
+    width: 100%;
+    height: 37px;
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    padding-left: 10px;
+    background-image: url("../img/polygon-1.png");
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+    margin: 0 0 22px 0;
+  }
+
+  &__textarea{
+    resize: none;
+    width: 578px;
+    height: 168px;
+    background-color: #ffffff;
+    font-family: "Helvetica", sans-serif;
+    font-style: oblique;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 10px 0 0 10px;
+    border: none;
+    margin: 0 0 18px 0;
+
+    &::placeholder{
+      color: #ababab;
+    }
+
+    @media (max-width: 1280px) {
+      padding: 2%;
+      width: 96%;
+    }
+  }
+
+  &__submit{
+    width: 122px;
+    height: 62px;
+    background-color: #ffffff;
+    color: #db302c;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 32px;
+    cursor: pointer;
+  }
+}
+
+.contact-form{
+
+  &__input{
+    width: 96%;
+    padding-left: 4%;
+    height: 37px;
+    background-color: #ffffff;
+    font-family: "Helvetica", sans-serif;
+    font-style: oblique;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color-black;
+    border: 1px solid $color-black;
+
+    &::placeholder{
+      color: #ababab;
+    }
+
+    &-group{
+      display: flex;
+      justify-content: space-between;
+      margin: 22px 0;
+    }
+
+    &__wrapper{
+      width: 48%;
+    }
+  }
+
+  &__select{
+    width: 100%;
+    height: 37px;
+    background-color: #ffffff;
+    border: 1px solid $color-black;
+    color: #000000;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    padding-left: 10px;
+    background-image: url("../img/polygon-1.png");
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+    margin: 0 0 22px 0;
+  }
+
+  &__textarea{
+    resize: none;
+    height: 168px;
+    background-color: #ffffff;
+    font-family: "Helvetica", sans-serif;
+    font-style: oblique;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    border: 1px solid $color-black;
+    margin: 0 0 18px 0;
+    padding: 2%;
+    width: 96%;
+
+    &::placeholder{
+      color: #ababab;
+    }
+  }
+
+  &__submit{
+    width: 122px;
+    height: 62px;
+    background-color: #db302c;
+    color: #ffffff;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 32px;
+    cursor: pointer;
+  }
+}
+
+
+.wpcf7-form{
+
+  & p{
+    margin: 0;
+  }
+}

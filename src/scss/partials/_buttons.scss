@@ -1,0 +1,141 @@
+.modal-button{
+  width: $m-button-w;
+  height: $m-button-h;
+  background-color: $color-gold;
+  color: $color-black;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: $m-button-margin;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+
+  @media (max-width: 1024px) {
+    margin: 0 20px;
+  }
+
+
+  &__icon{
+    padding-left: 13px;
+  }
+}
+
+.ff-button{
+  width: 137px;
+  height: 54px;
+  background-color: #db302c;
+  color: $color-white;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+
+  &--fr{
+    width: 243px;
+    height: 70px;
+
+    @media (max-width: 800px) {
+      min-width: auto !important;
+      height: 70px !important;
+      font-size: 18px !important;
+    }
+
+    @media (max-width: 560px) {
+      width: 243px !important;
+    }
+  }
+
+  @media (max-width: 800px) {
+    min-width: 62px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 560px) {
+    width: 100px;
+  }
+}
+
+.services-button{
+  display: block;
+  width: 238px;
+  height: 62px;
+  background-color: $color-gold;
+  color: $color-black;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 34px auto;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+
+.ln-button{
+  width: 238px;
+  height: 62px;
+  background-color: $color-gold;
+  color: $color-black;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  margin: 27px auto 30px;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+
+.cg-button{
+  width: 212px;
+  height: 62px;
+  background-color: #ffffff;
+  color: #db302c;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+  margin: 2px auto;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 20px;
+  }
+}
+
+.cg-contact-button{
+  width: 386px;
+  height: 62px;
+  background-color: $color-white;
+  color: #db302c;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+
+  @media (max-width: 800px) {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 386px;
+    width: 100%;
+  }
+}
+
+.button__link{
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,46 @@
+.modal{
+
+  width: $modal-w;
+  height: $modal-h;
+  background-color: $color-black70;
+
+  @media (max-width: 1024px) {
+    width: 500px;
+    height: 214px;
+  }
+
+  &-wrapper{
+    width: $content-width;
+    margin: $modal-margin-top auto;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+
+    @media (max-width: 1280px) {
+      width: 90%;
+    }
+
+    @media (max-width: 1024px) {
+      margin: 50px auto;
+    }
+  }
+
+  &__text{
+    color: $color-white;
+    font-family: "Eurostile LT Std - Demi", sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    padding: $modal-text-padding;
+    margin: 0;
+
+    @media (max-width: 1024px) {
+      padding: 26px 50px 10px 20px;
+      font-size: 30px;
+    }
+
+    & span{
+      color: $color-gold;
+    }
+  }
+}

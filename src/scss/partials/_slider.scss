@@ -1,0 +1,56 @@
+.my-slick{
+  width: 100%;
+
+  &__item{
+
+    &__comment{
+      width: 100%;
+      background-color: $color-white;
+
+      & p{
+        color: #000000;
+        font-family: "Helvetica", sans-serif;
+        font-style: oblique;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        padding: 24px 30px
+      }
+    }
+
+
+    &__com-author{
+      font-family: "Helvetica", sans-serif;
+      font-style: oblique;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19px;
+      text-align: right;
+      margin: 0;
+      padding-right: 3px;
+    }
+  }
+
+  &__dot{
+    width: 14px;
+    height: 14px;
+    border: 1px solid #d7d7d7;
+    background-color: $color-white;
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+.slick-active .my-slick__dot{
+  background-color: $color-black;
+}
+
+.slick-dots li {
+  margin: 0 1px !important;
+}
+
+ul.slick-dots{
+  position: initial;
+  padding-bottom: 26px;
+}
