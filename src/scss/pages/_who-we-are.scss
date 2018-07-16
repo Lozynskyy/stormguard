@@ -1,0 +1,20 @@
+.header{
+  &__bg-img--wwa{
+    background-image: url("../img/wwa-bg.png");
+    height: 264px;
+
+    @media (max-width: 800px) {
+      height: 236px;
+    }
+
+    @media (max-width: 560px) {
+      height: 214px;
+    }
+  }
+}
+
+.get-started{
+  &__content--wwa {
+    margin: 0 auto 30px;
+}
+}

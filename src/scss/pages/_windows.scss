@@ -1,0 +1,27 @@
+.header{
+  &__bg-img--w{
+    background-image: url("../img/w-bg.png");
+    height: 264px;
+
+    @media (max-width: 800px) {
+      height: 236px;
+    }
+
+    @media (max-width: 560px) {
+      height: 214px;
+    }
+  }
+}
+
+.services{
+  &__content--w{
+
+    &::after{
+      margin-top: 39px;
+    }
+  }
+
+  &__title--w{
+    margin-top: 35px;
+  }
+}
