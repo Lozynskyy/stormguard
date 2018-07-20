@@ -48,7 +48,11 @@
 
     &__link{
       text-decoration: none;
-      color: inherit;
+
+      &:hover{
+        text-decoration: underline;
+        color: $color-gold;
+      }
     }
 
     &__text{
@@ -65,6 +69,7 @@
     }
     &__img{
       padding-left: $h-cust-el-img-p-l;
+      fill: $color-gold;
 
       @media (max-width: 560px) {
         padding-left: 0;
