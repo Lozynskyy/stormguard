@@ -79,7 +79,11 @@ endif;?>
 
                     </span>
 
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/arrow-right.png" alt="arrow-right" class="header__custom-element__img">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="10" viewBox="0 0 7 10" class="header__custom-element__img">
+
+                        <defs><path id="mawqa" d="M595.63 462l6.37-5-6.37-5-.63.71 5.46 4.29-5.46 4.29.63.71z"/></defs><g><g transform="translate(-595 -452)"><use xlink:href="#mawqa"/></g></g>
+
+                    </svg>
 
                 </a>
 
@@ -167,7 +171,13 @@ endif;?>
 
                     <a href="<?php echo $contact_link; ?>" class="button__link">
 
-                        <?php echo $header_modal_button_text ?> <img src="<?php bloginfo('stylesheet_directory'); ?>/img/arrow-right-black.png" alt="arrow-right" class="modal-button__icon">
+                        <?php echo $header_modal_button_text ?>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="10" viewBox="0 0 7 10" class="modal-button__icon">
+
+                            <defs><path id="mawqa" d="M595.63 462l6.37-5-6.37-5-.63.71 5.46 4.29-5.46 4.29.63.71z"/></defs><g><g transform="translate(-595 -452)"><use xlink:href="#mawqa"/></g></g>
+
+                        </svg>
 
                     </a>
 
