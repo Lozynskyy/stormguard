@@ -37,7 +37,13 @@
   margin-left: 10px;
   cursor: pointer;
   padding: 0;
-  border: none;
+  border: 1px solid #db302c;
+  transition: background-color 0.5s, color 0.5s;
+
+  &:hover{
+    background-color: $color-white;
+    color: #db302c;
+  }
 
   &--fr{
     width: 243px;
