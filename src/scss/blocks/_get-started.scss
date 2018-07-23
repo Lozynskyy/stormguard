@@ -2,7 +2,7 @@
 
   &__content{
     width: $content-width;
-    margin: 0 auto 50px;
+    margin: 0 auto 52px;
 
     @media (max-width: 1280px) {
       width: 90%;
@@ -15,7 +15,7 @@
     font-size: 32px;
     font-weight: 400;
     text-align: center;
-    margin: 50px 0 5px 0;
+    margin: 48px 0 5px 0;
   }
 
   &__description{
@@ -83,6 +83,14 @@
       width: 100%;
       height: 41px;
       background-color: $color-gold;
+      color: $color-black;
+      transition: color 0.5s, background-color 0.5s, fill .5s;
+
+      &:hover{
+        background-color: #db302c;
+        color: $color-white;
+        fill: $color-white;
+      }
     }
 
     &__link{
@@ -95,17 +103,17 @@
     }
 
     &__text{
-      color: #000000;
       font-family: "Eurostile LT Std - Demi", sans-serif;
       font-size: 20px;
       font-weight: 400;
-      padding-left: 18px;
+      padding-left: 17px;
+      padding-top: 4px;
     }
 
     &__icon{
       width: 7px;
-      padding-left: 12px;
-      padding-bottom: 3px;
+      padding-left: 14px;
+      fill: inherit;
     }
   }
 }
