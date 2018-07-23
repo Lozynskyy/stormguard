@@ -80,10 +80,16 @@
   font-family: Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
-  margin: 34px auto;
+  margin: 35px auto 37px;
   cursor: pointer;
   padding: 0;
   border: none;
+  transition: color 0.5s, background-color 0.5s;
+
+  &:hover{
+    background-color: #db302c;
+    color: $color-white;
+  }
 }
 
 .ln-button{
