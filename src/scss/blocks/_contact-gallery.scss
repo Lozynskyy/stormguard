@@ -22,7 +22,7 @@
     font-family: "Eurostile LT Std - Demi", sans-serif;
     font-size: 32px;
     font-weight: 400;
-    margin: 42px 0 22px;
+    margin: 40px 0 10px;
 
     @media (max-width: 800px) {
       text-align: center;
@@ -119,9 +119,10 @@
 
     &__item{
       display: block;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       border: 1px solid $color-white;
       max-width: 130px;
+      cursor: pointer;
 
       @media (max-width: 1280px) {
         margin-right: 10px;
