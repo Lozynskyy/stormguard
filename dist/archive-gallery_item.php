@@ -16,20 +16,6 @@ if($gallery_page_query -> have_posts()) :
 
         $gallery_page_title = get_field('gallery_page_title');
 
-        $franchise_section_title = get_field('franchise_section_title');
-
-        $franchise_section_description = get_field('franchise_section_description');
-
-        $franchise_section_button_text = get_field('franchise_section_button_text');
-
-        $franchise_section_placeholder = get_field('franchise_section_placeholder');
-
-        $services_icons_section_title = get_field('services_icons_section_title');
-
-        $services_icon_section_description = get_field('services_icon_section_description');
-
-        $services_icons_section_button_text = get_field('services_icons_section_button_text');
-
     endwhile;
 
     wp_reset_postdata();
@@ -37,19 +23,7 @@ if($gallery_page_query -> have_posts()) :
 endif; ?>
 
 
-<section class="breadcrumb">
-
-    <div class="breadcrumb__content">
-
-        <?php if(function_exists('bcn_display')){
-
-            bcn_display();
-
-        }?>
-
-    </div>
-
-</section>
+<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="gallery">
 
@@ -95,46 +69,6 @@ endif; ?>
 
 </section>
 
-<section class="find-franchise">
-
-    <div class="find-franchise__content">
-
-        <div class="find-franchise__content__item find-franchise__content__item--left">
-
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/map-marker.png" alt="map-marker">
-
-            <div class="find-franchise__text">
-
-                <p class="find-franchise__text__top">
-
-                    <?php echo $franchise_section_title; ?>
-
-                </p>
-
-                <p class="find-franchise__text__bot">
-
-                    <?php echo $franchise_section_description; ?>
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="find-franchise__content__item find-franchise__content__item--right">
-
-            <input type="text" placeholder="<?php echo $franchise_section_placeholder; ?>" class="ff-input">
-
-            <button class="ff-button">
-
-                <?php echo $franchise_section_button_text ?>
-
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
+<?php get_template_part('template-parts/find-franchise'); ?>
 
 <?php get_footer(); ?>
