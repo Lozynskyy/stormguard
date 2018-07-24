@@ -1,17 +1,19 @@
 <?php
-$contact_block_title = get_field('contact_block_title', 'option');
 
-$contact_block_description = get_field('contact_block_description', 'option');
+    $contact_block_title = get_field('contact_block_title', 'option');
 
-$contact_block_button_1_text = get_field('contact_block_button_1_text', 'option');
+    $contact_block_description = get_field('contact_block_description', 'option');
 
-$contact_block_button_2_text = get_field('contact_block_button_2_text', 'option');
+    $contact_block_button_1_text = get_field('contact_block_button_1_text', 'option');
 
-$gallery_block_title = get_field('gallery_block_title', 'option');
+    $contact_block_button_2_text = get_field('contact_block_button_2_text', 'option');
 
-$gallery_block_description = get_field('gallery_block_description', 'option');
+    $gallery_block_title = get_field('gallery_block_title', 'option');
 
-$gallery_block_link_text = get_field('gallery_block_link_text', 'option');
+    $gallery_block_description = get_field('gallery_block_description', 'option');
+
+    $gallery_block_link = get_field('gallery_block_link', 'option');
+
 ?>
 
 <section class="contact-gallery">
@@ -57,11 +59,15 @@ $gallery_block_link_text = get_field('gallery_block_link_text', 'option');
 
                 <?php echo $gallery_block_description; ?>
 
-                <a href="<?php echo get_post_type_archive_link( 'gallery_item' ); ?>" class="contact-gallery__description__link">
+                <?php if( $gallery_block_link ) : ?>
 
-                    <?php echo $gallery_block_link_text; ?>
+                <a href="<?php echo $gallery_block_link['url']; ?>" class="contact-gallery__description__link">
+
+                    <?php echo $gallery_block_link['title']; ?>
 
                 </a>
+
+                <?php endif; ?>
 
             </p>
 
@@ -79,19 +85,15 @@ $gallery_block_link_text = get_field('gallery_block_link_text', 'option');
 
                     while ( $gallery_query -> have_posts() ) :
 
-                        $gallery_query -> the_post();
-
-                        $image = get_field('photo'); ?>
-
-                        <?php if( !empty($image) ): ?>
+                        $gallery_query -> the_post();?>
 
                         <a href="<?php the_permalink(); ?>">
 
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="contact-gallery__gallery__item">
+                            <img src="<?php the_post_thumbnail_url('medium_large'); ?>" alt="gallery item" class="contact-gallery__gallery__item">
 
                         </a>
 
-                    <?php endif;
+                    <?php
 
                     endwhile;
 

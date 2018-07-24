@@ -14,7 +14,7 @@ if($gallery_item_page_query -> have_posts()) :
 
         $gallery_item_page_query -> the_post();
 
-        $gallery_item_button_text = get_field('gallery_item_button_text');
+        $gallery_item_button = get_field('gallery_item_button');
 
     endwhile;
 
@@ -33,15 +33,9 @@ endif; ?>
 
             while ( have_posts() ) :
 
-                the_post();
+                the_post(); ?>
 
-                $image = get_field('photo'); ?>
-
-                <?php if( !empty($image) ): ?>
-
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="gallery-single__image">
-
-            <?php endif; ?>
+                <img src="<?php the_post_thumbnail_url(); ?>" alt="gallery item" class="gallery-single__image">
 
             <?php endwhile;
 
@@ -49,11 +43,17 @@ endif; ?>
 
         <button class="ln-button">
 
-            <a href="<?php echo get_post_type_archive_link( 'gallery_item' ); ?>" class="button__link">
+            <?php
 
-                <?php echo $gallery_item_button_text; ?>
+            if( $gallery_item_button ): ?>
 
-            </a>
+                <a href="<?php echo $gallery_item_button['url']; ?>" class="button__link">
+
+                    <?php echo $gallery_item_button['title']; ?>
+
+                </a>
+
+            <?php endif; ?>
 
         </button>
 

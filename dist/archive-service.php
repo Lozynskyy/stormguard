@@ -49,21 +49,15 @@ endif; ?>
 
                 while ( have_posts() ) :
 
-                    the_post();
-
-                    $image = get_field('service_image'); ?>
+                    the_post(); ?>
 
                     <div class="all-services__item">
 
-                        <?php if( !empty($image) ): ?>
+                        <a href="<?php the_permalink(); ?>" class="all-services__item__link">
 
-                            <a href="<?php the_permalink(); ?>" class="all-services__item__link">
+                            <img src="<?php the_post_thumbnail_url('medium_large'); ?>" alt="service image" class="all-services__item__image">
 
-                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="all-services__item__image">
-
-                            </a>
-
-                        <?php endif; ?>
+                        </a>
 
                         <h3 class="all-services__item__title">
 

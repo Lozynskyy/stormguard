@@ -15,9 +15,9 @@
 
     <?php
 
-        $main_color = get_field('main_color', 'option');
+    $main_color = get_field('main_color', 'option');
 
-        $secondary_color = get_field('secondary_color', 'option');
+    $secondary_color = get_field('secondary_color', 'option');
 
     ?>
 
@@ -43,19 +43,25 @@
 
         the_post();
 
-        $thumbnail = get_the_post_thumbnail_url();
+        if(get_post_type() == 'service') {
+
+            $thumbnail = get_the_post_thumbnail_url(134);
+        }
+
+        elseif (get_post_type() == 'gallery_item') {
+
+            $thumbnail = get_the_post_thumbnail_url(206);
+        }
+
+        else $thumbnail = get_the_post_thumbnail_url();
 
         $header_logo = get_field('header_logo', 'option');
-
-        $header_link_text = get_field('header_link_text', 'option');
 
         $header_main_menu = get_field('header_main_menu', 'option');
 
         $header_additional_menu = get_field('header_additional_menu', 'option');
 
-        $locations_link = get_page_link(81);
-
-        $home_link = get_page_link(77);
+        $home_link = get_field('home_link', 'option');
 
     endwhile;
 
@@ -69,11 +75,17 @@ endif;?>
 
             <div class="header__custom-element">
 
-                <a href="<?php echo $locations_link; ?>" class="header__custom-element__link">
+            <?php
+
+                $header_link = get_field('header_link', 'option');
+
+                if( $header_link ): ?>
+
+                <a href="<?php echo $header_link['url']; ?>" class="header__custom-element__link">
 
                     <span class="header__custom-element__text">
 
-                        <?php echo $header_link_text; ?>
+                        <?php echo $header_link['title']; ?>
 
                     </span>
 
@@ -84,6 +96,8 @@ endif;?>
                     </svg>
 
                 </a>
+
+            <?php endif; ?>
 
             </div>
 

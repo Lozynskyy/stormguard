@@ -18,7 +18,7 @@ if($service_page_query -> have_posts()) :
 
         $services_icon_section_description = get_field('services_icon_section_description');
 
-        $services_icons_section_button_text = get_field('services_icons_section_button_text');
+        $services_icons_section_button = get_field('services_icons_section_button');
 
     endwhile;
 
@@ -38,7 +38,7 @@ endif; ?>
 
                 the_post();
 
-                $image = get_field('service_image');
+                $image = get_the_post_thumbnail_url();
 
                 $current_service = get_the_title();
 
@@ -46,7 +46,7 @@ endif; ?>
 
                     <div class="service__image__wrapper">
 
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="service__image">
+                        <img src="<?php echo $image; ?>" alt="service image" class="service__image">
 
                     </div>
 
@@ -140,7 +140,7 @@ endif; ?>
 
                 endwhile; ?>
 
-                <?php wp_reset_postdata(); ?>
+            <?php wp_reset_postdata(); ?>
 
             <?php endif; ?>
 
@@ -148,11 +148,17 @@ endif; ?>
 
         <button class="services-button">
 
-            <a href="<?php echo get_post_type_archive_link( 'service' ); ?>" class="button__link">
+            <?php
 
-                <?php echo $services_icons_section_button_text ?>
+            if( $services_icons_section_button ): ?>
 
-            </a>
+                <a href="<?php echo $services_icons_section_button['url']; ?>" class="button__link">
+
+                    <?php echo $services_icons_section_button['title']; ?>
+
+                </a>
+
+            <?php endif; ?>
 
         </button>
 

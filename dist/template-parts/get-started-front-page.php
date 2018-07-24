@@ -8,12 +8,6 @@
     $get_started_section_commercial_link = get_field('get_started_section_commercial_link');
 
     $get_started_section_insurance_link = get_field('get_started_section_insurance_link');
-
-    $residential_link = get_page_link(83);
-
-    $commercial_link = get_page_link(85);
-
-    $insurance_link = get_page_link(87);
 ?>
 
 <section class="get-started">
@@ -38,21 +32,27 @@
 
                 <div class="get-started__item__title">
 
-                    <a href="<?php echo $residential_link; ?>" class="get-started__item__link">
+                    <?php
+
+                    if( $get_started_section_residential_link ): ?>
+
+                        <a href="<?php echo $get_started_section_residential_link['url']; ?>" class="get-started__item__link">
 
                         <span class="get-started__item__text">
 
-                            <?php echo $get_started_section_residential_link; ?>
+                            <?php echo $get_started_section_residential_link['title']; ?>
 
                         </span>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="10" viewBox="0 0 7 10" class="get-started__item__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="10" viewBox="0 0 7 10" class="get-started__item__icon">
 
-                            <defs><path id="mawqa" d="M595.63 462l6.37-5-6.37-5-.63.71 5.46 4.29-5.46 4.29.63.71z"/></defs><g><g transform="translate(-595 -452)"><use xlink:href="#mawqa"/></g></g>
+                                <defs><path id="mawqa" d="M595.63 462l6.37-5-6.37-5-.63.71 5.46 4.29-5.46 4.29.63.71z"/></defs><g><g transform="translate(-595 -452)"><use xlink:href="#mawqa"/></g></g>
 
-                        </svg>
+                            </svg>
 
-                    </a>
+                        </a>
+
+                    <?php endif; ?>
 
                 </div>
 
@@ -62,21 +62,27 @@
 
                 <div class="get-started__item__title">
 
-                    <a href="<?php echo $commercial_link; ?>" class="get-started__item__link">
+                    <?php
+
+                    if( $get_started_section_commercial_link ): ?>
+
+                        <a href="<?php echo $get_started_section_commercial_link['url']; ?>" class="get-started__item__link">
 
                         <span class="get-started__item__text">
 
-                            <?php echo $get_started_section_commercial_link; ?>
+                            <?php echo $get_started_section_commercial_link['title']; ?>
 
                         </span>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="10" viewBox="0 0 7 10" class="get-started__item__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="10" viewBox="0 0 7 10" class="get-started__item__icon">
 
-                            <defs><path id="mawqa" d="M595.63 462l6.37-5-6.37-5-.63.71 5.46 4.29-5.46 4.29.63.71z"/></defs><g><g transform="translate(-595 -452)"><use xlink:href="#mawqa"/></g></g>
+                                <defs><path id="mawqa" d="M595.63 462l6.37-5-6.37-5-.63.71 5.46 4.29-5.46 4.29.63.71z"/></defs><g><g transform="translate(-595 -452)"><use xlink:href="#mawqa"/></g></g>
 
-                        </svg>
+                            </svg>
 
-                    </a>
+                        </a>
+
+                    <?php endif; ?>
 
                 </div>
 
@@ -86,21 +92,27 @@
 
                 <div class="get-started__item__title">
 
-                    <a href="<?php echo $insurance_link; ?>" class="get-started__item__link">
+                    <?php
+
+                    if( $get_started_section_insurance_link ): ?>
+
+                        <a href="<?php echo $get_started_section_insurance_link['url']; ?>" class="get-started__item__link">
 
                         <span class="get-started__item__text">
 
-                            <?php echo $get_started_section_insurance_link; ?>
+                            <?php echo $get_started_section_insurance_link['title']; ?>
 
                         </span>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="10" viewBox="0 0 7 10" class="get-started__item__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="10" viewBox="0 0 7 10" class="get-started__item__icon">
 
-                            <defs><path id="mawqa" d="M595.63 462l6.37-5-6.37-5-.63.71 5.46 4.29-5.46 4.29.63.71z"/></defs><g><g transform="translate(-595 -452)"><use xlink:href="#mawqa"/></g></g>
+                                <defs><path id="mawqa" d="M595.63 462l6.37-5-6.37-5-.63.71 5.46 4.29-5.46 4.29.63.71z"/></defs><g><g transform="translate(-595 -452)"><use xlink:href="#mawqa"/></g></g>
 
-                        </svg>
+                            </svg>
 
-                    </a>
+                        </a>
+
+                    <?php endif; ?>
 
                 </div>
 

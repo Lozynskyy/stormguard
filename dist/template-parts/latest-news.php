@@ -4,7 +4,7 @@
 
     $last_posts_section_read_more = get_field('last_posts_section_read_more');
 
-    $last_posts_section_button_text = get_field('last_posts_section_button_text');
+    $last_posts_section_button = get_field('last_posts_section_button');
 
 ?>
 
@@ -30,9 +30,9 @@
 
                     $the_query -> the_post();
 
-                    $image = get_field('post_image');
+                    $image = get_the_post_thumbnail_url();
 
-                    $author = get_field('post_author');
+                    $author = get_the_author_meta('display_name');
 
                     $post_date_month = get_the_date( 'M' );
 
@@ -61,7 +61,7 @@
 
                             <?php if( !empty($image) ): ?>
 
-                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="latest-news__item__image">
+                                <img src="<?php echo $image; ?>" alt="post image" class="latest-news__item__image">
 
                             <?php endif; ?>
 
@@ -107,11 +107,17 @@
 
         <button class="ln-button">
 
-            <a href="<?php echo get_post_type_archive_link( 'post' ); ?>" class="button__link">
+            <?php
 
-                <?php echo $last_posts_section_button_text; ?>
+            if( $last_posts_section_button ): ?>
 
-            </a>
+                <a href="<?php echo $last_posts_section_button['url']; ?>" class="button__link">
+
+                    <?php echo $last_posts_section_button['title']; ?>
+
+                </a>
+
+            <?php endif; ?>
 
         </button>
 

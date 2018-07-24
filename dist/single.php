@@ -12,15 +12,15 @@
 
                 the_post();
 
-                $image = get_field('post_image');
+                $image = get_the_post_thumbnail_url();
 
-                $author = get_field('post_author');
+                $author = get_the_author_meta('display_name');
 
                 if( !empty($image) ): ?>
 
                     <div class="post__image__wrapper">
 
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="post__image">
+                        <img src="<?php echo $image; ?>" alt="post image" class="post__image">
 
                     </div>
 

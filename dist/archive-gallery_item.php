@@ -41,21 +41,15 @@ endif; ?>
 
                 while ( have_posts() ) :
 
-                    the_post();
-
-                    $image = get_field('photo'); ?>
+                    the_post(); ?>
 
                     <div class="gallery__item">
 
-                        <?php if( !empty($image) ): ?>
+                        <a href="<?php the_permalink(); ?>">
 
-                            <a href="<?php the_permalink(); ?>">
+                            <img src="<?php the_post_thumbnail_url('medium_large'); ?>" alt="gallery item" class="gallery__item__image">
 
-                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="gallery__item__image">
-
-                            </a>
-
-                        <?php endif; ?>
+                        </a>
 
                     </div>
 

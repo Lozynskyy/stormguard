@@ -2,7 +2,7 @@
 
 function sg_connect_styles()
 {
-    wp_register_style( 'style', get_template_directory_uri() . '/css/style.css?65', array(), '1', 'all' );
+    wp_register_style( 'style', get_template_directory_uri() . '/css/style.css?68', array(), '1', 'all' );
     wp_register_style( 'slick', get_template_directory_uri() . '/other/slick/slick.css', array(), '1', 'all' );
     wp_register_style( 'slick-theme', get_template_directory_uri() . '/other/slick/slick-theme.css?1', array(), '1', 'all' );
     wp_enqueue_style( 'style' );
