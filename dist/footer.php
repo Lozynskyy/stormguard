@@ -4,9 +4,9 @@
 
         the_post();
 
-        $footer_copyright_text = get_field('footer_copyright_text', 'options');
+        $footer_copyright_text = get_field('footer_copyright_text', 'option');
 
-        $footer_copyright_link_text = get_field('footer_copyright_link_text', 'options');
+        $footer_copyright_link = get_field('footer_copyright_link', 'option');
 
     endwhile;
 
@@ -21,9 +21,9 @@ endif;?>
 
             <?php echo $footer_copyright_text; ?>
 
-            <a href="#" class="footer__copyright__link">
+            <a href="<?php echo $footer_copyright_link['url']; ?>" class="footer__copyright__link">
 
-                <?php echo $footer_copyright_link_text; ?>
+                <?php echo $footer_copyright_link['title']; ?>
 
             </a>
 
@@ -33,11 +33,11 @@ endif;?>
 
             <?php wp_nav_menu(array(
 
-                    'theme_location' => 'footer_menu',
+                'theme_location' => 'footer_menu',
 
-                    'menu_class' => 'footer__menu__list',
+                'menu_class' => 'footer__menu__list',
 
-                    'container' => false
+                'container' => false
             )); ?>
 
         </nav>
