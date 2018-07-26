@@ -30,6 +30,7 @@
     font-size: 12px;
     font-weight: 400;
     margin: 0;
+    line-height: inherit;
 
     @media (max-width: 1024px) {
       margin-right: 10px;
@@ -76,6 +77,7 @@
       font-weight: 400;
       line-height: 20px;
       color: #f7f8f8;
+      margin: 0;
     }
 
     & a{

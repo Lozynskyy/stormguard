@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6{
   font-family: "Eurostile LT Std - Demi", sans-serif;
   font-weight: 400;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 h1{
@@ -59,4 +60,8 @@ td, th{
 th{
   color: #db302c;
   font-family: "Eurostile LT Std", sans-serif;
+}
+
+li{
+  margin: 5px 0;
 }

@@ -35,7 +35,7 @@
       }
 
       @media (max-width: 560px) {
-        width: 98%;
+        width: 96%;
       }
     }
   }
@@ -99,7 +99,7 @@
       text-align: right;
       cursor: pointer;
       width: 35px;
-      margin: 8px 0 8px auto;
+      margin: 36px 0 8px auto;
 
       &:after, &:before, & div{
         background-color: #fff;
@@ -208,6 +208,7 @@
       position: relative;
       color: $color-white;
       transition: color 0.5s;
+      margin: 0;
 
       @media (max-width: 1024px) {
         padding-left: 8px;
@@ -274,7 +275,6 @@
   position: absolute;
   list-style: none;
   padding: 0;
-  border: none;
   background: #ffffff;
   left: -80px;
   bottom: -44px;
@@ -285,6 +285,7 @@
   & li{
     padding: 10px;
     color: $color-black;
+    margin: 0;
 
     &:hover{
       color: #db302c;
