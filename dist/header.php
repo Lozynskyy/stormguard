@@ -53,15 +53,12 @@
             $thumbnail = get_the_post_thumbnail_url(206);
         }
 
+        elseif (get_post_type() == 'post') {
+
+            $thumbnail = get_the_post_thumbnail_url(74);
+        }
+
         else $thumbnail = get_the_post_thumbnail_url();
-
-        $header_logo = get_field('header_logo', 'option');
-
-        $header_main_menu = get_field('header_main_menu', 'option');
-
-        $header_additional_menu = get_field('header_additional_menu', 'option');
-
-        $home_link = get_field('home_link', 'option');
 
     endwhile;
 
@@ -105,7 +102,11 @@ endif;?>
 
                 <span class="header__menu__burger_1">
 
-                    <?php echo $header_main_menu; ?>
+                    <?php
+
+                    $header_main_menu = get_field('header_main_menu', 'option');
+
+                    echo $header_main_menu; ?>
 
                 </span>
 
@@ -133,9 +134,15 @@ endif;?>
 
                 <div class="header__custom-element">
 
+                    <?php $home_link = get_field('home_link', 'option');?>
+
                     <a href="<?php echo $home_link; ?>" class="header__custom-element__link">
 
-                        <?php if( !empty($header_logo) ): ?>
+                        <?php
+
+                        $header_logo = get_field('header_logo', 'option');
+
+                        if( !empty($header_logo) ): ?>
 
                             <img src="<?php echo $header_logo; ?>" alt="logo" class="header__logo">
 

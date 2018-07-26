@@ -307,6 +307,7 @@ template {
 
 :root {
   --main-color: #db302c;
+
   --secondary-color: #ffdd00;
 }
 
@@ -2196,12 +2197,19 @@ ul.slick-dots {
   display: block;
   border-top: 1px solid #e1e1e1; }
 
+.storm-temp__404{
+  height: 340px;
+}
 .storm-temp__content {
   width: 1200px;
   margin: 10px auto; }
   @media (max-width: 1280px) {
     .storm-temp__content {
       width: 90%; } }
+
+.storm-temp__content__404 {
+  padding-top: 60px;
+}
 
 .storm-temp__title {
   color: var(--main-color);
@@ -2335,6 +2343,22 @@ th {
 
 li {
   margin: 5px 0; }
+
+
+.iframe__container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;}
+
+.iframe__container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; }
+
+
 
 .header__bg-img--wwa {
   background-image: url("../img/wwa-bg.png");

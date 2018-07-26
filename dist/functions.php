@@ -2,7 +2,7 @@
 
 function sg_connect_styles()
 {
-    wp_register_style( 'style', get_template_directory_uri() . '/css/style.css?80', array(), '1', 'all' );
+    wp_register_style( 'style', get_template_directory_uri() . '/css/style.css?92', array(), '1', 'all' );
     wp_register_style( 'slick', get_template_directory_uri() . '/other/slick/slick.css', array(), '1', 'all' );
     wp_register_style( 'slick-theme', get_template_directory_uri() . '/other/slick/slick-theme.css?1', array(), '1', 'all' );
     wp_enqueue_style( 'style' );
@@ -17,10 +17,12 @@ function sg_connect_scripts()
     wp_register_script( 'slick', get_template_directory_uri() . '/other/slick/slick.min.js', array(), '2', true );
     wp_register_script( 'myslick', get_template_directory_uri() . '/js/myslick.js', array(), '2', true );
     wp_register_script( 'burger', get_template_directory_uri() . '/js/burger.js?1', array(), '2', true );
+    wp_register_script( 'iframeParent', get_template_directory_uri() . '/js/iframeParentSearch.js', array(), '2', true );
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'slick' );
     wp_enqueue_script( 'myslick' );
     wp_enqueue_script( 'burger' );
+    wp_enqueue_script( 'iframeParent' );
 }
 add_action( 'wp_enqueue_scripts', 'sg_connect_scripts', 5);
 

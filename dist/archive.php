@@ -4,6 +4,8 @@ Template Name: Archives
 */
 get_header(); ?>
 
+<?php get_template_part('template-parts/breadcrumb'); ?>
+
     <div id="container" class="storm-temp">
         <div id="content" class="storm-temp__content" role="main">
 
@@ -31,5 +33,6 @@ get_header(); ?>
 
         </div><!-- #content -->
     </div><!-- #container -->
+<?php get_template_part('template-parts/contact-gallery'); ?>
 
 <?php get_footer(); ?>
