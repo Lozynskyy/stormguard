@@ -135,11 +135,11 @@ endif;?>
 
                 <nav class="header__menu header__menu--secondary">
 
-                    <span class="header__menu__burger_2">
+                    <div class="header__menu__burger_2">
 
-                        <?php echo $header_additional_menu; ?>
+                        <div></div>
 
-                    </span>
+                    </div>
 
                     <?php wp_nav_menu(array(
 
