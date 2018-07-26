@@ -12,6 +12,16 @@ get_header(); ?>
 
                 <?php get_search_form(); ?>
 
+                <?php
+                if(have_posts()):
+                    while (have_posts()):
+                        the_post(); ?>
+
+                        <p><?php the_title(); ?></p>
+
+                    <?php endwhile;
+                endif;?>
+
             </main><!-- #main -->
         </div><!-- #primary -->
     </div><!-- .wrap -->

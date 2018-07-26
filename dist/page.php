@@ -2,47 +2,30 @@
 
 <?php get_template_part('template-parts/breadcrumb'); ?>
 
-    <section class="page">
+<section class="page">
 
-        <div class="page__content">
+    <div class="page__content">
 
-            <?php if ( have_posts() ) :
+        <?php if ( have_posts() ) :
 
-                while ( have_posts() ) :
+            while ( have_posts() ) :
 
-                    the_post();
+                the_post();?>
 
-                    $image = get_field('page_image');
 
-                    if( !empty($image) ): ?>
+                <div class="page__info">
 
-                        <div class="page__image__wrapper">
+                    <?php the_content(); ?>
 
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="page__image">
+                </div>
 
-                        </div>
+            <?php endwhile;
 
-                    <?php endif; ?>
+        endif; ?>
 
-                    <div class="page__info">
+    </div>
 
-                        <h2 class="page__title">
-
-                            <?php the_title(); ?>
-
-                        </h2>
-
-                        <?php the_content(); ?>
-
-                    </div>
-
-                <?php endwhile;
-
-            endif; ?>
-
-        </div>
-
-    </section>
+</section>
 
 <?php get_template_part('template-parts/get-started'); ?>
 

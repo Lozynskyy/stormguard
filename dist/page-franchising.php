@@ -4,57 +4,30 @@
 
 <?php get_template_part('template-parts/breadcrumb'); ?>
 
-    <section class="franchising">
+<section class="page">
 
-        <div class="franchising__content">
+    <div class="page__content">
 
-            <?php if ( have_posts() ) :
+        <?php if ( have_posts() ) :
 
-                while ( have_posts() ) :
+            while ( have_posts() ) :
 
-                    the_post();
+                the_post();?>
 
-                    $image = get_field('page_image');
 
-                    if( !empty($image) ): ?>
+                <div class="page__info">
 
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="franchising__image">
+                    <?php the_content(); ?>
 
-                    <?php endif; ?>
+                </div>
 
-                    <?php
+            <?php endwhile;
 
-                    if( have_rows('articles') ):
+        endif; ?>
 
-                        while ( have_rows('articles') ) : the_row();?>
+    </div>
 
-                            <h2 class="franchising__title">
-
-                                <?php the_sub_field('article_title');?>
-
-                            </h2>
-
-                            <p class="franchising__text">
-
-                                <?php the_sub_field('article_content');?>
-
-                            </p>
-
-                        <?php endwhile;
-
-                    endif;
-
-                    ?>
-
-                <?php endwhile;
-
-            endif; ?>
-
-        </div>
-
-        <div style="clear: both"></div>
-
-    </section>
+</section>
 
 <?php get_template_part('template-parts/find-franchise', 'page-franchising'); ?>
 

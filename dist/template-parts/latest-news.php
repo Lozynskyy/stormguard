@@ -59,11 +59,15 @@
 
                         <div>
 
+                            <div class="latest-news__item__image__wrapper">
+
                             <?php if( !empty($image) ): ?>
 
                                 <img src="<?php echo $image; ?>" alt="post image" class="latest-news__item__image">
 
                             <?php endif; ?>
+
+                            </div>
 
                             <div class="latest-news__item__info">
 
@@ -73,17 +77,13 @@
 
                                 </h3>
 
-                                <p class="latest-news__item__short">
+                                <?php echo get_excerpt(400); ?>
 
-                                    <?php echo get_excerpt(); ?>
+                                <a href="<?php the_permalink(); ?>" class="latest-news__item__link">
 
-                                    <a href="<?php the_permalink(); ?>" class="latest-news__item__link">
+                                    <?php echo $last_posts_section_read_more; ?>
 
-                                        <?php echo $last_posts_section_read_more; ?>
-
-                                    </a>
-
-                                </p>
+                                </a>
 
                             </div>
 

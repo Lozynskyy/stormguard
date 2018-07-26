@@ -2,7 +2,7 @@
 
 function sg_connect_styles()
 {
-    wp_register_style( 'style', get_template_directory_uri() . '/css/style.css?68', array(), '1', 'all' );
+    wp_register_style( 'style', get_template_directory_uri() . '/css/style.css?80', array(), '1', 'all' );
     wp_register_style( 'slick', get_template_directory_uri() . '/other/slick/slick.css', array(), '1', 'all' );
     wp_register_style( 'slick-theme', get_template_directory_uri() . '/other/slick/slick-theme.css?1', array(), '1', 'all' );
     wp_enqueue_style( 'style' );
@@ -16,7 +16,7 @@ function sg_connect_scripts()
     wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), '2', true );
     wp_register_script( 'slick', get_template_directory_uri() . '/other/slick/slick.min.js', array(), '2', true );
     wp_register_script( 'myslick', get_template_directory_uri() . '/js/myslick.js', array(), '2', true );
-    wp_register_script( 'burger', get_template_directory_uri() . '/js/burger.js', array(), '2', true );
+    wp_register_script( 'burger', get_template_directory_uri() . '/js/burger.js?1', array(), '2', true );
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'slick' );
     wp_enqueue_script( 'myslick' );
@@ -40,20 +40,6 @@ function special_nav_class ($classes, $item) {
 }
 
 add_theme_support( 'post-thumbnails' );
-
-// Add the filter to manage the p tags
-add_filter( 'the_excerpt', 'wti_remove_autop_for_image', 0 );
-
-function wti_remove_autop_for_image( $excerpt )
-{
-    global $post;
-
-    // Check for single page and image post type and remove
-    if ( is_home() && $post->post_type == 'post' )
-        remove_filter('the_excerpt', 'wpautop');
-
-    return $excerpt;
-}
 
 function get_excerpt(){
     $excerpt = get_the_content();

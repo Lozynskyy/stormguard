@@ -27,7 +27,7 @@ get_header();?>
 
             <div class="blog__item">
 
-                <div>
+                <div class="blog__item__image__wrapper">
 
                     <?php if( !empty($image) ): ?>
 
@@ -52,7 +52,7 @@ get_header();?>
 
                 </div>
 
-                <div>
+                <div class="blog__item__info">
 
                     <h3 class="blog__item__title">
 
@@ -60,17 +60,13 @@ get_header();?>
 
                     </h3>
 
-                    <p class="blog__item__short">
+                    <?php echo get_excerpt(); ?>
 
-                        <?php echo get_excerpt(); ?>
+                    <a href="<?php the_permalink(); ?>" class="blog__item__link">
 
-                        <a href="<?php the_permalink(); ?>" class="blog__item__link">
+                        <?php echo $post_read_more; ?>
 
-                            <?php echo $post_read_more; ?>
-
-                        </a>
-
-                    </p>
+                    </a>
 
                     <span class="blog__item__author">
 
