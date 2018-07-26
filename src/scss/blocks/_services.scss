@@ -103,10 +103,6 @@
       line-height: 23px;
       text-align: center;
       margin: 12px 0;
-
-      @media (max-width: 560px) {
-        display: none;
-      }
     }
 
     &__link{

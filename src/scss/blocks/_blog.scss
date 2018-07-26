@@ -48,8 +48,11 @@
 
       &__wrapper{
 
+        width: 384px;
+
         @media (max-width: 600px) {
           width: 100%;
+          min-height: 64px;
         }
       }
     }
@@ -83,7 +86,13 @@
     }
 
     &__info{
-      height: 300px;
+      color: #000000;
+      font-family: Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 0 15px 20px;
+      margin: 0;
     }
 
     &__title{
@@ -91,16 +100,15 @@
       font-family: "Eurostile LT Std - Demi", sans-serif;
       font-size: 28px;
       font-weight: 400;
-      margin: 12px 13px 4px;
+      margin: 12px 0 4px;
     }
 
-    &__short{
+    & p{
       color: #000000;
       font-family: Helvetica, sans-serif;
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
-      padding: 0 15px 20px;
       margin: 0;
     }
 
@@ -116,7 +124,7 @@
       font-size: 14px;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 14px 16px;
+      padding: 14px 0;
       display: block;
     }
   }

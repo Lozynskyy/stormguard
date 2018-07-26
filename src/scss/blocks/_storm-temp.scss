@@ -54,7 +54,7 @@
       & label{
         color: #000000;
         font-family: "Eurostile LT Std - Demi", sans-serif;
-        font-size: 30px;
+        font-size: 24px;
         font-weight: 400;
         
         @media (max-width: 640px) {
@@ -68,7 +68,7 @@
 
       & #s{
         width: 241px;
-        height: 54px;
+        height: 34px;
         background-color: #ffffff;
         border: 1px solid #b7b7b7;
         padding: 0 0 0 18px;
@@ -78,13 +78,12 @@
 
         @media (max-width: 640px) {
           width: 150px;
-          height: 40px;
         }
       }
 
       & #searchsubmit{
-        width: 137px;
-        height: 54px;
+        width: 100px;
+        height: 34px;
         background-color: #db302c;
         color: #ffffff;
         font-family: Helvetica, sans-serif;
@@ -93,16 +92,20 @@
         margin-left: 10px;
         cursor: pointer;
         padding: 0;
-        border: none;
+        border: 1px solid #db302c;
+        transition: color .5s, background-color .5s;
+
+        &:hover{
+          background-color: $color-white;
+          color: #db302c;
+        }
 
         @media (max-width: 640px) {
-          width: 110px;
-          height: 42px;
+          width: 90px;
         }
 
         @media (max-width: 490px) {
-          width: 100px;
-          margin-left: 5px;
+          width: 80px;
         }
       }
     }

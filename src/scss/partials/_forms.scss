@@ -232,4 +232,12 @@
   & p{
     margin: 0;
   }
+
+  & span.wpcf7-not-valid-tip{
+    color: $color-gold;
+  }
+
+  & div.wpcf7-response-output{
+    color: $color-gold;
+  }
 }
