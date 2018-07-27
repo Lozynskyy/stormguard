@@ -60,13 +60,21 @@ get_header();?>
 
                     </h3>
 
-                    <?php echo get_excerpt(); ?>
+                    <?php if( !empty(get_the_content())) : ?>
 
-                    <a href="<?php the_permalink(); ?>" class="blog__item__link">
+                        <?php echo get_excerpt(); ?>
 
-                        <?php echo $post_read_more; ?>
+                        <a href="<?php the_permalink(); ?>" class="blog__item__link">
 
-                    </a>
+                            <?php echo $post_read_more; ?>
+
+                        </a>
+
+                    <?php else:?>
+
+                        <p>Sorry, but the content is empty right now!</p>
+
+                    <?php endif; ?>
 
                     <span class="blog__item__author">
 

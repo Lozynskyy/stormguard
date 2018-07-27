@@ -15,7 +15,15 @@
 
                 <div class="page__info">
 
-                    <?php the_content(); ?>
+                    <?php if( !empty(get_the_content())) : ?>
+
+                        <?php the_content(); ?>
+
+                    <?php else:?>
+
+                        <p>Sorry, but the content is empty right now!</p>
+
+                    <?php endif; ?>
 
                 </div>
 
